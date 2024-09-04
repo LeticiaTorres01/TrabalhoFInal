@@ -1,0 +1,5 @@
+package trabalhofinal.persistencia;
+
+public interface ClienteDAO {
+
+}

@@ -1,0 +1,29 @@
+package trabalhofinal.persistencia;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import trabalhofinal.negocio.Cliente;
+
+public class ClienteDAOImp implements ClienteDAO{
+	@Override
+	public String inserir(Cliente emp) {
+	return null;
+	}
+	@Override
+	public String alterar(Cliente emp) {
+	return null;
+	}
+	@Override
+	public String excluir(Cliente emp) {
+	return null;
+	}
+	@Override
+	public List<Cliente> listarTodos() {
+	return null;
+	}
+	@Override
+	public Cliente pesquisarPorCodCliente(int codCliente) {
+	return null;
+	}
+}

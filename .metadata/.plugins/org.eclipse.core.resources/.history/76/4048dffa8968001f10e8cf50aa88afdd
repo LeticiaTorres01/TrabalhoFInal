@@ -1,0 +1,93 @@
+package trabalhofinal.negocio;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+
+public class Hospedagem {
+	private int codHospedagem;
+	private String estado;
+	private LocalDate dataInicio;
+	private LocalDate dataFim;
+	private int qtdPessoas;
+	private float desconto;
+	private Double valorFinal;
+	private Cliente codCliente;
+	private Chale codChale;
+	
+	public Hospedagem() {
+		
+	}
+
+	public int getCodHospedagem() {
+		return codHospedagem;
+	}
+
+	public void setCodHospedagem(int codHospedagem) {
+		this.codHospedagem = codHospedagem;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public Timestamp getDataInicio() {
+		return dataInicio;
+	}
+
+	public void setDataInicio(Timestamp dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public Timestamp getDataFim() {
+		return dataFim;
+	}
+
+	public void setDataFim(Timestamp dataFim) {
+		this.dataFim = dataFim;
+	}
+
+	public int getQtdPessoas() {
+		return qtdPessoas;
+	}
+
+	public void setQtdPessoas(int qtdPessoas) {
+		this.qtdPessoas = qtdPessoas;
+	}
+
+	public float getDesconto() {
+		return desconto;
+	}
+
+	public void setDesconto(float desconto) {
+		this.desconto = desconto;
+	}
+
+	public Double getValorFinal() {
+		return valorFinal;
+	}
+
+	public void setValorFinal(Double valorFinal) {
+		this.valorFinal = valorFinal;
+	}
+
+	public Cliente getCodCliente() {
+		return codCliente;
+	}
+
+	public void setCodCliente(Cliente codCliente) {
+		this.codCliente = codCliente;
+	}
+
+	public Chale getCodChale() {
+		return codChale;
+	}
+
+	public void setCodChale(Chale codChale) {
+		this.codChale = codChale;
+	}
+	
+	
+}

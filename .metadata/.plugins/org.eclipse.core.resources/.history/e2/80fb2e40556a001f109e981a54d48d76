@@ -1,0 +1,35 @@
+package trabalhofinal.view;
+import java.sql.Connection;
+import java.time.LocalDate;
+
+import trabalhofinal.controller.ChaleController;
+import trabalhofinal.controller.ClienteController;
+import trabalhofinal.controller.HospedagemController;
+import trabalhofinal.negocio.Chale;
+import trabalhofinal.negocio.Cliente;
+import trabalhofinal.negocio.Hospedagem;
+import trabalhofinal.persistencia.ConnectionFactory;
+
+public class Main {
+	public static void main(String[] args) {
+		Connection conn = ConnectionFactory.getConnection();
+		if (conn != null) {
+			System.out.println("OK");
+			ConnectionFactory.close(conn);
+		}
+	
+		ClienteController controllercons = new ClienteController();
+		Cliente cli = new Cliente();
+		cli = controllercons.pesquisarPorCodCliente(1);
+		if (cli != null) {
+		System.out.println("ID Cliente: " + cli.getCodCliente());
+		System.out.println("RG: " + cli.getRgCliente());
+		System.out.println("Endereço: " + cli.getEnderecoCliente());
+		System.out.println("Bairro: " + cli.getBairroCliente());
+		System.out.println("Cidade: " + cli.getCidadeCliente());
+		System.out.println("Estado: " + cli.getEstadoCliente());
+		System.out.println("CEP: " + cli.getCepCliente());
+		System.out.println("Data de Nascimento: " + cli.getNascimentoCliente());
+		}
+	}
+}

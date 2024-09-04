@@ -1,0 +1,134 @@
+package trabalhofinal.view;
+import java.sql.Connection;
+import java.time.LocalDate;
+import java.util.List;
+import trabalhofinal.controller.ChaleController;
+import trabalhofinal.controller.ClienteController;
+import trabalhofinal.controller.HospedagemController;
+import trabalhofinal.negocio.Chale;
+import trabalhofinal.negocio.Cliente;
+import trabalhofinal.negocio.Hospedagem;
+import trabalhofinal.persistencia.ConnectionFactory;
+
+public class Main {
+	public static void main(String[] args) {
+		Connection conn = ConnectionFactory.getConnection();
+		if (conn != null) {
+			System.out.println("OK");
+			ConnectionFactory.close(conn);
+		}
+		
+		
+		Hospedagem hos = new Hospedagem();
+		HospedagemController controller = new HospedagemController();
+		hos.setCodChale(1);
+		hos.setCodCliente(1);
+        hos.setEstado("Ativo");
+        hos.setDataInicio(LocalDate.of(2024, 9, 1));
+        hos.setDataFim(LocalDate.of(2024, 9, 7));
+        hos.setQtdPessoas(2);
+        hos.setDesconto(Double.valueOf(50.00));
+        hos.setValorFinal(Double.valueOf(1500.00)); // Exemplo de valor final
+        System.out.println(controller.inserir(hos));
+		
+		/*Chale cha = new Chale();
+		ChaleController controller = new ChaleController();
+		cha.setCodChale(1);
+		cha.setLocalizacao("Chalé A - Montanha");
+		cha.setValorAltaEstacao(150.00);
+		cha.setValorBaixaEstacao(100.00);
+		System.out.println(controller.inserir(cha));
+		
+		cha.setCodChale(2);
+		cha.setLocalizacao("Chalé B - Praia");
+		cha.setValorAltaEstacao(200.00);
+		cha.setValorBaixaEstacao(120.00);
+		System.out.println(controller.inserir(cha));
+		
+		cha.setCodChale(3);
+		cha.setLocalizacao("Chalé C - Campo");
+		cha.setValorAltaEstacao(180.00);
+		cha.setValorBaixaEstacao(110.00);
+		System.out.println(controller.inserir(cha));*/
+		
+		/*Cliente cli = new Cliente();	
+		ClienteController controller = new ClienteController();
+		cli.setCodCliente(1);
+		cli.setRgCliente("1111111");
+		cli.setEnderecoCliente("Rua das Flores, 123");
+		cli.setBairroCliente("Centro");
+		cli.setCidadeCliente("Brasília");
+		cli.setEstadoCliente("Distrito Federal");
+		cli.setCepCliente("10000000");
+		cli.setNascimentoCliente(java.sql.Date.valueOf("1990-05-06"));
+		System.out.println(controller.inserir(cli));
+
+		
+		cli.setCodCliente(2);
+		cli.setRgCliente("2222222");
+		cli.setEnderecoCliente("Avenida Paulista, 1500");
+		cli.setBairroCliente("Bela Vista");
+		cli.setCidadeCliente("São Paulo");
+		cli.setEstadoCliente("São Paulo");
+		cli.setCepCliente("20000000");
+		cli.setNascimentoCliente(java.sql.Date.valueOf("1985-11-15"));
+		System.out.println(controller.inserir(cli));	
+
+		
+		cli.setCodCliente(3);
+		cli.setRgCliente("3333333");
+		cli.setEnderecoCliente("Rua da Harmonia, 45");
+		cli.setBairroCliente("Jardim Botânico");
+		cli.setCidadeCliente("Curitiba");
+		cli.setEstadoCliente("Paraná");
+		cli.setCepCliente("30000000");
+		cli.setNascimentoCliente(java.sql.Date.valueOf("1978-03-12"));
+		System.out.println(controller.inserir(cli));*/
+		
+		/*Cliente cli = new Cliente();
+		ClienteController controlleralt = new ClienteController();
+		cli.setCodCliente(2);
+		cli.setRgCliente("2222222");
+		cli.setEnderecoCliente("Avenida Paulista, 1500");
+		cli.setBairroCliente("Bela Vista");
+		cli.setCidadeCliente("São Paulo");
+		cli.setEstadoCliente("São Paulo");
+		cli.setCepCliente("20000000");
+		cli.setNascimentoCliente(java.sql.Date.valueOf("1985-11-28"));
+		System.out.println(controlleralt.alterar(cli));
+		
+		Cliente cli = new Cliente();
+		ClienteController controller = new ClienteController();
+		cli.setCodCliente(3);
+		System.out.println(controller.excluir(cli));
+		
+		/*ClienteController controller = new ClienteController();
+		List<Cliente> lista = controller.listarTodos();
+		if(lista != null){
+		for(Cliente e : lista){
+		System.out.println("ID Cliente: "+e.getCodCliente());
+		System.out.println("RG: "+e.getRgCliente());
+		System.out.println("Endereço: "+e.getEnderecoCliente());
+		System.out.println("Bairro: "+e.getBairroCliente());
+		System.out.println("Cidade: "+e.getCidadeCliente());
+		System.out.println("Estado: "+e.getEstadoCliente());
+		System.out.println("CEP: "+e.getCepCliente());
+		System.out.println("Data de Nascimento: "+e.getNascimentoCliente());
+			}
+		}
+		
+		ClienteController controllercons = new ClienteController();
+		//Cliente cli = new Cliente();
+		cli = controller.pesquisarPorCodCliente(1);
+		if (cli != null) {
+		System.out.println("ID Cliente: " + cli.getCodCliente());
+		System.out.println("RG: " + cli.getRgCliente());
+		System.out.println("Endereço: " + cli.getEnderecoCliente());
+		System.out.println("Bairro: " + cli.getBairroCliente());
+		System.out.println("Cidade: " + cli.getCidadeCliente());
+		System.out.println("Estado: " + cli.getEstadoCliente());
+		System.out.println("CEP: " + cli.getCepCliente());
+		System.out.println("Data de Nascimento: " + cli.getNascimentoCliente());
+		}*/
+	}
+}

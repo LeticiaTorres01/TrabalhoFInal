@@ -1,0 +1,21 @@
+package trabalhofinal.view;
+import java.sql.Connection;
+import java.time.LocalDate;
+
+import trabalhofinal.controller.ChaleController;
+import trabalhofinal.controller.ClienteController;
+import trabalhofinal.controller.HospedagemController;
+import trabalhofinal.negocio.Chale;
+import trabalhofinal.negocio.Cliente;
+import trabalhofinal.negocio.Hospedagem;
+import trabalhofinal.persistencia.ConnectionFactory;
+
+public class Main {
+	public static void main(String[] args) {
+		Connection conn = ConnectionFactory.getConnection();
+		if (conn != null) {
+			System.out.println("OK");
+			ConnectionFactory.close(conn);
+		}
+	}
+}

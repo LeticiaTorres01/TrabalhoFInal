@@ -1,0 +1,44 @@
+package trabalhofinal.negocio;
+
+public class Chale {
+	private int codChale;
+	private String localizacao;
+	private Double valorAltaEstacao;
+	private Double valorBaixaEstacao;
+	
+	public Chale() {
+		
+	}
+
+	public int getCodChale() {
+		return codChale;
+	}
+
+	public void setCodChale(int codChale) {
+		this.codChale = codChale;
+	}
+
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
+	public Double getValorAltaEstacao() {
+		return valorAltaEstacao;
+	}
+
+	public void setValorAltaEstacao(Double valorAltaEstacao) {
+		this.valorAltaEstacao = valorAltaEstacao;
+	}
+
+	public Double getValorBaixaEstacao() {
+		return valorBaixaEstacao;
+	}
+
+	public void setValorBaixaEstacao(Double valorBaixaEstacao) {
+		this.valorBaixaEstacao = valorBaixaEstacao;
+	}
+}
