@@ -1,6 +1,6 @@
 # Projeto: Aplicação Java Desktop para Gestão de Chalés
 ## Descrição do Trabalho
-Este projeto tem como objetivo a criação de uma aplicação Java Desktop completa para o cadastro de dados das tabelas Cliente, Hospedagem e Chale, conforme o modelo conceitual fornecido. A aplicação deve permitir a entrada de dados por meio de formulários, facilitando o gerenciamento das informações.
+Este projeto tem como objetivo a criação de uma aplicação Java Desktop completa para o cadastro de dados das tabelas *Cliente*, *Hospedagem* e *Chale*, conforme o modelo conceitual fornecido. A aplicação deve permitir a entrada de dados por meio de formulários, facilitando o gerenciamento das informações.
 
 ## Requisitos
 *Disciplina:* Programação de Computadores 2
@@ -10,11 +10,11 @@ Este projeto tem como objetivo a criação de uma aplicação Java Desktop compl
 ## Configuração do Ambiente
 Para que esta aplicação funcione corretamente, é necessário:
 
-*Criar o banco de dados trabalhofinal:*
+*Criar o banco de dados `trabalhofinal`:*
 Use o PostgreSQL para criar o banco de dados e as tabelas necessárias conforme o modelo conceitual.
 
-*Configurar a FactoryConnection:*
-A FactoryConnection deve ser configurada para conectar-se ao banco de dados gigachales.
+*Configurar a `FactoryConnection`:*
+A `FactoryConnection` deve ser configurada para conectar-se ao banco de dados `trabalhofinal`.
 Certifique-se de ajustar as configurações de conexão (URL, usuário, senha, etc.) conforme o seu ambiente de desenvolvimento.
 
 ## Instruções de Uso
